@@ -19,3 +19,9 @@ removeH1Button.addEventListener('click', function() {
         h1Element.remove();
     }
 });
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/src/Js/service-worker.js')
+      .then(() => console.log('Service Worker зарегистрирован!'))
+      .catch(err => console.error('Ошибка регистрации Service Worker:', err));
+  }
+  

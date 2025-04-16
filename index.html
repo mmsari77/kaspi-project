@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href= "src/images/123.png">
+    <link rel="manifest" href="manifest.json">
     <title>Kaspi.kz</title>
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
@@ -18,21 +23,13 @@
         </div>
     </div>
     <input type="file" id="photoInput" accept="image/*" style="display: none;">
-    <button id = "knopka" onclick="document.getElementById('photoInput').click();">Выбрать фото</button>
+    <button id="knopka" onclick="document.getElementById('photoInput').click();">Выбрать фото</button>
     <img id="preview" src="" style="max-width: 250px;">
     <div class="justLine"></div>
     <div class="Knopki2">
-        
-        
-        
         <button><h1 id="Pred">Предъявить документ</h1></button>
-        <img src="src/images/qr (1).png" alt="QR Code">
-
+        <img src="/src/images/qr (1).png" alt="QR Code">
     </div>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
-
     <script src="/src/Js/javaScript.js"></script>
 </body>
 </html>
