@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* запрещает прокрутку */
+  }
+  
+  body {
+    background-image: url('твой_фон.jpg'); /* путь к твоему изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
 
 #photo {
     width: 12px;
