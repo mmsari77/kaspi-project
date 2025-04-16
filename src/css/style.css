@@ -2,15 +2,21 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden; /* запрещает прокрутку */
+    height: 100vh; /* 100% высоты viewport */
+    overflow: hidden; /* Отключает прокрутку */
+    position: fixed; /* Фиксирует страницу */
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  #verkh {
+    position: relative; /* Если нужно, чтобы элементы внутри не "плавали" */
   }
   
   body {
-    background-image: url('твой_фон.jpg'); /* путь к твоему изображению */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding-top: env(safe-area-inset-top); /* Отступ для статус-бара на iOS */
+    box-sizing: border-box;
   }
   
 

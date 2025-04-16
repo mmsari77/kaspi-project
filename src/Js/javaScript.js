@@ -24,4 +24,8 @@ if ('serviceWorker' in navigator) {
       .then(() => console.log('Service Worker зарегистрирован!'))
       .catch(err => console.error('Ошибка регистрации Service Worker:', err));
   }
+  window.addEventListener('scroll', (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0); /* Всегда держит страницу вверху */
+  });
   
