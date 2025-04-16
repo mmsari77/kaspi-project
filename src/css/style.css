@@ -123,15 +123,16 @@ button {
   .pred-text {
     color: white;
     margin: 0 auto; /* Центрируем текст */
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    margin-right: 60px;
+    margin-right: 40px; /* Уменьшаем отступ справа, чтобы текст не сжимался */
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
   }
-#photo12{
-    margin-left: 70px;
-    width: 25.6px;
-    height: 25.6px;
-}
+  #photo12 {
+    margin-left: 50px; /* Уменьшаем отступ слева, чтобы QR-код был ближе к тексту */
+    width: 20px; /* Уменьшаем размер QR-кода */
+    height: 20px;
+  }
   
 
 
