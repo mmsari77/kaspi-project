@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href= "src/images/123.png">
+    <link rel="apple-touch-icon" href="src/images/123.png">
     <link rel="manifest" href="manifest.json">
     <title>Kaspi.kz</title>
     <link rel="stylesheet" href="/src/css/style.css">
@@ -22,13 +22,21 @@
             <button id="text2">Реквизиты</button>
         </div>
     </div>
-    <input type="file" id="photoInput" accept="image/*" style="display: none;">
-    <button id="knopka" onclick="document.getElementById('photoInput').click();">Выбрать фото</button>
-    <img id="preview" src="" style="max-width: 400px;">
-    <div class="justLine"></div>
-    <div class="Knopki2">
-        <button><h1 id="Pred">Предъявить документ</h1></button>
-        <img src="/src/images/qr (1).png" alt="QR Code">
+    <div class="tab-content">
+        <div id="documents-tab" class="tab-pane">
+            <input type="file" id="photoInput" accept="image/*" style="display: none;">
+            <button id="knopka" onclick="document.getElementById('photoInput').click();">Выбрать фото</button>
+            <img id="preview" src="" style="max-width: 350px;">
+            <div class="justLine"></div>
+            <div class="Knopki2">
+                <button><h1 id="Pred">Предъявить документ</h1></button>
+                <img src="/src/images/qr.png" alt="QR Code">
+            </div>
+        </div>
+        <div id="requisites-tab" class="tab-pane" style="display: none;">
+            <p>Здесь будут отображаться реквизиты. Например, номер счёта, банк и т.д.</p>
+            <!-- Ты можешь добавить сюда нужное содержимое -->
+        </div>
     </div>
     <script src="/src/Js/javaScript.js"></script>
 </body>

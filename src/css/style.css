@@ -1,109 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* 100% высоты viewport */
-    overflow: hidden; /* Отключает прокрутку */
-    position: fixed; /* Фиксирует страницу */
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  #verkh {
-    position: relative; /* Если нужно, чтобы элементы внутри не "плавали" */
-  }
-  
-  body {
-    padding-top: env(safe-area-inset-top); /* Отступ для статус-бара на iOS */
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* 100% высоты viewport */
+  overflow: hidden; /* Отключает прокрутку */
+  position: fixed; /* Фиксирует страницу */
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#verkh {
+  position: relative; /* Если нужно, чтобы элементы внутри не "плавали" */
+}
+
+body {
+  padding-top: env(safe-area-inset-top); /* Отступ для статус-бара на iOS */
+  box-sizing: border-box;
+}
 
 #photo {
-    width: 12px;
-    margin-left: 15px;
-    margin-top: 8px;
+  width: 12px;
+  margin-left: 15px;
+  margin-top: 8px;
 }
 
 #text1Udos {
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top: -3px;
-    left: 0;
-    width: 100%;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .square {
-    width: 90%;
-    height: 37px;
-    border-radius: 10px;
-    background-color: #F1EDED;
-    margin: 30px auto;
+  width: 90%;
+  height: 37px;
+  border-radius: 10px;
+  background-color: #F0ECEC;
+  margin: 25px auto;
 }
 
 .text2Knopki {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-#text1 {
-    font-size: 15px;
-    width: 50%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    border-radius: 10px;
-    height: 33px;
-    border: 0;
-    margin-left: 1px;
-    background-color: white;
-    margin-top: 2px;
-    color : black;
+#text1, #text2 {
+  font-size: 15px;
+  width: 50%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 10px;
+  height: 33px;
+  border: 0;
+  margin: 1px;
+  background-color: #F0ECEC; /* По умолчанию неактивная вкладка */
+  color: black;
+  transition: background-color 0.3s ease; /* Плавный переход для фона кнопки */
 }
 
-#text2 {
-    font-size: 15px;
-    margin-top: 1px;
-    width: 48%;
-    border-radius: 10px;
-    height: 34px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin-left: 2px;
-    border: 0;
-    color: black;
+#text1.active, #text2.active {
+  background-color: white; /* Активная вкладка выделяется белым фоном */
 }
 
 button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .justLine {
-    width: 100%;
-    background-color: #bdbabad9;
-    height: 1px;
-    margin: 10px auto;
+  width: 100%;
+  background-color: #bdbabad9;
+  height: 1px;
+  margin: 10px auto;
+}
+
+.Knopki2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+  gap: 10px;
 }
 
 .Knopki2 button {
-    width: 100%;
+  width: 100%;
+}
+
+.Knopki2 img {
+  width: 150px;
+  height: 150px;
+  display: block;
 }
 
 #Pred {
-    background-color: #2978A9;
-    color: white;
-    margin: 0;
-    padding: 10px;
-    font-size: 18px;
+  background-color: #1B7CBD;
+  border-radius: 12px;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
 }
-#preview{
-    display: block;
-    margin: 0 auto;
 
+#preview {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px; /* Перенесено из HTML */
+}
+
+/* Стили для вкладок */
+.tab-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tab-pane {
+  display: none; /* По умолчанию все вкладки скрыты */
+  opacity: 0; /* Начальная непрозрачность для анимации */
+  transition: opacity 0.5s ease; /* Плавный переход для непрозрачности */
+}
+
+.tab-pane.active {
+  display: block; /* Показываем активную вкладку */
+  opacity: 1; /* Делаем её полностью видимой */
 }
